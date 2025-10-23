@@ -72,19 +72,51 @@
         android:id="@+id/btn_clean"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="4dp"
         android:text="Limpar"
         app:layout_constraintEnd_toStartOf="@+id/vertical_guideline"
         app:layout_constraintStart_toStartOf="@+id/number_of_people"
-        app:layout_constraintTop_toBottomOf="@+id/number_of_people" />
+        app:layout_constraintTop_toBottomOf="@+id/rg_percentege" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/vertical_guideline"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.5" />
+        app:layout_constraintGuide_end="205dp" />
+
+    <RadioGroup
+        android:id="@+id/rg_percentege"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/number_of_people"
+        app:layout_constraintStart_toStartOf="@+id/number_of_people"
+        app:layout_constraintTop_toBottomOf="@+id/number_of_people">
+
+        <RadioButton
+            android:id="@+id/rb_option_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10%" />
+
+        <RadioButton
+            android:id="@+id/rb_option_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="15%" />
+
+        <RadioButton
+            android:id="@+id/rb_option_three"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20%" />
+
+    </RadioGroup>
 
     <Button
         android:id="@+id/btn_calculate"
@@ -95,6 +127,6 @@
         android:text="Calcular"
         app:layout_constraintEnd_toEndOf="@+id/number_of_people"
         app:layout_constraintStart_toEndOf="@+id/vertical_guideline"
-        app:layout_constraintTop_toBottomOf="@+id/number_of_people" />
+        app:layout_constraintTop_toBottomOf="@+id/rg_percentege" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
