@@ -1,10 +1,13 @@
 package com.example.appgorjeta
 
 import android.os.Bundle
+import android.widget.Button
+import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
+import com.google.android.material.textfield.TextInputEditText
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -16,5 +19,17 @@ class MainActivity : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        val btnClean: Button = findViewById(R.id.btn_clean)
+        val btnCalculate: Button = findViewById(R.id.btn_calculate)
+        val EdtTotal: TextInputEditText = findViewById(R.id.tie_total)
+        val EdtNumPeople: TextInputEditText = findViewById(R.id.tie_number_of_people)
+
+        btnClean.setOnClickListener {
+
+
+        }
+
+
     }
 }
